@@ -1,0 +1,90 @@
+html {
+  background: #1B2335;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 648px;
+  height: 540px;
+  margin: 50px auto;
+  padding: 0px;
+  background: radial-gradient(circle, #283149 20%, #283149 5%, #1B2335 75%);
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #1B2335;
+  float: left;
+  text-align: center;
+  color: #121824;
+  line-height: 50px;
+  padding: 1px;
+  perspective: 800px;
+}
+
+.sqrInside {
+  width: 45px;
+  height: 45px;
+  transition: all 1sec ease;
+  background: transparent;
+}
+
+.sqrRotate {
+  background: #EF7B94;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-transform: rotateY(180deg);
+}
+
+.sqrYellowToOrange {
+  background: linear-gradient(#FFF0BE 90%, #EF7B94 10%);
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  webkit-box-shadow: 20px 20px 50px 20px white;
+}
+
+.sqrYellowToOrange {
+  background: linear-gradient(#EF7B94 90%, #EF7B94 10%);
+}
+
+.sqrOrangeToPurple {
+  background: linear-gradient(#EF7B94 1%, #7F2A83 99%);
+}
+
+.sqrRotateRev {
+  background: transparent;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-transform: rotateY(150deg);
+}
+
+.badgeCont {
+  width: 200px;
+  margin-left: 50px;
+  margin-top: 50px;
+  padding: 0px;
+  -webkit-transform: rotate(180deg);
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+}
+
+.tryBefore {
+  background: #EF7B94;
+  width: 50px;
+  height: 50px;
+}
+
+.tryBefore::after {
+  content: "";
+  display: inline-block;
+  background: #EF7B94;
+  width: 35.5px;
+  height: 36px;
+  margin-top: 32px;
+  margin-left: 7px;
+  -webkit-transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=countdown.css.map */

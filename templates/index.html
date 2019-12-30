@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    {% if not auth %}
+        {% include 'base/navbar.html' %}
+        {% include 'accounts/form.html' with btn_value="Submit" h1_value="Reveal your Gift!" %}
+    {% else %}
+        <div id="home {% if gf %}home-pics{% endif %}" class="intro route bg-image"
+             style="background-image: url('{% if msg.image %}{{ msg.image.url }}{% else %}{% endif %}');{% if not msg.image %}background-color: lightslategrey{% endif %}">
+            <div class="overlay-itro"></div>
+            <div class="intro-content display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <p class="display-6 color-d">{% if gf %}{% else %}{% endif %}</p>
+                        <h1 class="intro-title mb-4">{% if gf %}{% else %}{% endif %}</h1>
+                        <p class="intro-subtitle"><span class="text-slider-items">{{ msg.text }}</span><strong
+                                class="text-slider"></strong></p>
+                    {% if gf %}
+                    <div class="main-content"></div>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
