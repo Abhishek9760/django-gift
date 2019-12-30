@@ -12,7 +12,7 @@ SECRET_KEY = '1b!+nn6wrh83%*mt5)7f*5o-__45rrj=o(^^384kt1rks=t3!h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['new-year-gift.herokuapp.com/']
+ALLOWED_HOSTS = ['new-year-gift.herokuapp.com']
 
 # Application definition
 
