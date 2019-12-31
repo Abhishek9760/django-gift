@@ -31,7 +31,6 @@ $('document').ready(function () {
         'static/img/amruta/IMG-20191025-WA0014.jpg',
         'static/img/amruta/IMG-20191027-WA0022.jpg',
         'static/img/amruta/IMG-20191027-WA0023.jpg',
-        'static/img/amruta/IMG-20191029-WA0014.jpg',
         'static/img/amruta/IMG-20191127-WA0021.jpg',
         'static/img/amruta/IMG-20191127-WA0022.jpg',
         'static/img/amruta/IMG-20191127-WA0023.jpg',
