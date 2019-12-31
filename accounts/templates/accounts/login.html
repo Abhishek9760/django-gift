@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% include 'accounts/form.html' with form=form btn_value='Login' h1_value="Login" %}
+    {% include 'base/navbar.html' %}
+    {% include 'accounts/form.html' with form=form btn_value='Login' h1_value="Login" login=True %}
 {% endblock content %}

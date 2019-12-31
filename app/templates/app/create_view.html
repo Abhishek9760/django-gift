@@ -2,5 +2,6 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+    {% include 'base/navbar.html' %}
     {% include 'accounts/form.html' with btn_value="Save" h1_value="Create your Surprise!" %}
 {% endblock %}

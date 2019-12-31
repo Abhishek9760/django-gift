@@ -1,5 +1,4 @@
-(function ($) {
-    /*--/ Star Typed /--*/
+$('document').ready(function () {
     if ($('.text-slider').length == 1) {
         var typed_strings = $('.text-slider-items').text();
         var typed = new Typed('.text-slider', {
@@ -19,7 +18,6 @@
             // 	console.log('onBegin')
             // },
             onComplete: function onComplete(self) {
-                console.log('onBegin');
                 $('.main-content').html("<p class=\"pt-3\"><a class=\"btn btn-outline-success btn js-scroll px-4\" href='thank-you/' role=\"button\">Yes❤</a></p>")
             },
 
@@ -50,11 +48,11 @@
     ];
 
     var cout = 1;
-    $('#home').css('background-image', 'url("' + urls[0] + '")');
+    $('#home-pics').css('background-image', 'url("' + urls[0] + '")');
+    console.log($('#home-pics'));
     setInterval(function () {
-        $('#home').css('background-image', 'url("' + urls[cout] + '")');
+        $('#home-pics').css('background-image', 'url("' + urls[cout] + '")');
         cout == urls.length - 1 ? cout = 0 : cout++;
     }, 5000);
-})(jQuery);
-
+});
 

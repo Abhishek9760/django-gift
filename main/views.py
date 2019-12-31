@@ -23,7 +23,8 @@ def password_view(request):
             if obj.exists():
                 auth = True
                 msg_obj = obj.first()
-                if "amruta" in msg_obj.name.lower():
+                print(msg_obj.name)
+                if "Amruta" == msg_obj.name:
                     gf = True
                 return render(request, 'index.html',
                               {'form': form, 'msg': msg_obj, 'auth': auth, 'gf': gf})

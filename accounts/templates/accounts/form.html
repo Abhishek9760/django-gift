@@ -1,13 +1,18 @@
 {% load crispy_forms_tags %}
 <div class="container">
     <div class="col-12 col-md-6 mx-auto my-4">
-    {% if h1_value %}
-        <h3 class="display-5">{{ h1_value }}</h3>
-    {% endif %}
+        {% if h1_value %}
+            <h3 class="display-5">{{ h1_value }}</h3>
+        {% endif %}
         <form enctype="multipart/form-data" method='POST' {% if id %}id="{{ id }}"{% endif %}
               {% if action_url %}action="{{ create_url }}"{% endif %}> {% csrf_token %}
             {{ form|crispy }}
             <button type='submit' class='btn btn-primary btn-lg'>{{ btn_value }}</button>
         </form>
+        {% if login %}
+            <p class="lead">New User? <a href="{% url 'register' %}">Register Here</a></p>
+        {% elif register %}
+            <p class="lead my-2">Already a User? <a href="{% url 'login' %}">Login Here</a></p>
+        {% endif %}
     </div>
 </div>

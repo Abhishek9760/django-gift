@@ -1,0 +1,98 @@
+$darkBlue: #1B2335;
+$lightBlue: #283149;
+$purple: #7F2A83;
+$lightYellow: #FFF0BE;
+$lightOrange: #EF7B94;
+
+html {
+  background: #1B2335;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 648px;
+  height: 540px;
+  // border: 1px solid #283149;
+  margin: 50px auto;
+  padding: 0px;
+  background: radial-gradient(circle, $lightBlue 20%, $lightBlue 5%, $darkBlue 75%);
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border:1px solid $darkBlue;
+  float: left;
+  text-align: center;
+  color: darken( $darkBlue, 5% ); //darken to 0% for good effect
+  line-height: 50px;
+  padding: 1px;
+  perspective: 800px;
+}
+
+.sqrInside {
+  width: 45px;
+  height:45px;
+  transition: all 1sec ease;
+  background: transparent; //$darkBlue;
+}
+
+.sqrRotate {
+  background: $lightOrange;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-transform: rotateY(180deg);
+}
+
+.sqrYellowToOrange {
+  background: linear-gradient($lightYellow 90%, $lightOrange 10%);
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  webkit-box-shadow:20px 20px 50px 20px white;
+  //box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.sqrYellowToOrange {
+  background: linear-gradient($lightOrange 90%, $lightOrange 10%);
+}
+
+.sqrOrangeToPurple {
+  background: linear-gradient($lightOrange 1%,$purple 99%);
+}
+
+.sqrRotateRev {
+  background: transparent;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-transform: rotateY(150deg);
+}
+
+
+.badgeCont {
+  width: 200px;
+  // height: 80px;
+  margin-left: 50px;
+  margin-top: 50px;
+  padding: 0px;
+  -webkit-transform: rotate(180deg);
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+}
+
+.tryBefore {
+  background: $lightOrange;
+  width: 50px;
+  height: 50px;
+}
+
+.tryBefore::after {
+  content:"";
+  display: inline-block;
+  background: $lightOrange;
+  width: 35.5px;
+  height: 36px;
+  margin-top: 32px;
+  margin-left: 7px;
+  -webkit-transform: rotate(45deg);
+}

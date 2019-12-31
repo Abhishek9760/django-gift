@@ -2,5 +2,6 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-	{% include 'accounts/form.html' with form=form btn_value='Submit' h1_value="Register" %}
+    {% include 'base/navbar.html' %}
+    {% include 'accounts/form.html' with form=form btn_value='Submit' h1_value="Register" register=True %}
 {% endblock content %}
