@@ -24,9 +24,7 @@ $('document').ready(function () {
         });
 
     }
-
-
-    var urls = [
+    let urls = [
         'static/img/amruta/IMG-20190929-WA0016.jpg',
         'static/img/amruta/IMG-20191002-WA0017.jpg',
         'static/img/amruta/IMG-20191004-WA0051.jpg',
@@ -47,12 +45,11 @@ $('document').ready(function () {
         'static/img/amruta/IMG_20191108_201628_904.jpg'
     ];
 
-    var cout = 1;
-    $('#home-pics').css('background-image', 'url("' + urls[0] + '")');
-    console.log($('#home-pics'));
+    let cout = 1;
+    $('#home').css('background-image', 'url("' + urls[0] + '")');
     setInterval(function () {
-        $('#home-pics').css('background-image', 'url("' + urls[cout] + '")');
-        cout == urls.length - 1 ? cout = 0 : cout++;
+        $('#home').css('background-image', 'url("' + urls[cout] + '")');
+        cout === urls.length - 1 ? cout = 0 : cout++;
     }, 5000);
 });
 

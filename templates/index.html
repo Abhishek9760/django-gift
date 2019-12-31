@@ -7,8 +7,8 @@
         {% include 'base/navbar.html' %}
         {% include 'accounts/form.html' with form=form btn_value="Submit" h1_value="Unlock your Gift!" %}
     {% else %}
-        <div id="home {% if gf %}home-pics{% endif %}" class="intro route bg-image"
-             style="background-image: url('{% if msg.image %}{{ msg.image.url }}{% endif %}')">
+        <div {% if gf %}id="home"{% endif %} class="intro route bg-image"
+             style="background-image: url('{% if msg.image %}{{ msg.image.url }}{% else %}{% endif %}')">
             <div class="overlay-itro"></div>
             <div class="intro-content display-table">
                 <div class="table-cell">
